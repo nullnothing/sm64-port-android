@@ -330,8 +330,8 @@ static void gfx_sdl_handle_events(void) {
 #endif
             case SDL_WINDOWEVENT:
                 if (event.window.event == SDL_WINDOWEVENT_SIZE_CHANGED) {
-                    window_width = event.window.data1;
-                    window_height = event.window.data2;
+                    window_width = 720;
+                    window_height = 540;
                 }
                 break;
             case SDL_QUIT:
