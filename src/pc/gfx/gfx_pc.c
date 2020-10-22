@@ -938,15 +938,15 @@ static void gfx_calc_and_set_viewport(const Vp_t *viewport) {
     float width = 2.0f * viewport->vscale[0] / 4.0f;
     float height = 2.0f * viewport->vscale[1] / 4.0f;
     float x = (viewport->vtrans[0] / 4.0f) - width / 2.0f;
-    float y = 0.0f; //SCREEN_HEIGHT - ((viewport->vtrans[1] / 4.0f) + height / 2.0f);
+    float y = SCREEN_HEIGHT - ((viewport->vtrans[1] / 4.0f) + height / 2.0f);
     
     width *= RATIO_X;
     height *= RATIO_Y;
     x *= RATIO_X;
     y *= RATIO_Y;
     
-    rdp.viewport.x = x;
-    rdp.viewport.y = y;
+    rdp.viewport.x = 0.0f; //x;
+    rdp.viewport.y = 0.0f; //y;
     rdp.viewport.width = width;
     rdp.viewport.height = height;
     
