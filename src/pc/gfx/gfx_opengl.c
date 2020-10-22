@@ -462,7 +462,7 @@ static void gfx_opengl_set_viewport(int x, int y, int width, int height) {
 }
 
 static void gfx_opengl_set_scissor(int x, int y, int width, int height) {
-    glScissor(x, y, width, height);
+    glScissor(0, 0, width, height);
 }
 
 static void gfx_opengl_set_use_alpha(bool use_alpha) {
