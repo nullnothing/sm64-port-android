@@ -457,7 +457,7 @@ static void gfx_opengl_set_zmode_decal(bool zmode_decal) {
 }
 
 static void gfx_opengl_set_viewport(int x, int y, int width, int height) {
-    glViewport(x, y - height, width, height);
+    glViewport(x, y - 100, width, height);
     current_height = height;
 }
 
